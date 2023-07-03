@@ -1,0 +1,32 @@
+{
+    "name": "WaPay - Qiwi token",
+    "version": "1.0.0",
+    "description": "Расширение на получение токена Qiwi",
+    "manifest_version": 3,
+    "author": "C4ke",
+    "content_scripts": [
+        {
+          "matches": [
+            "*://*.qiwi.com/main",
+            "*://qiwi.com/main"
+          ],
+          "js": [
+            "content.js"
+          ]
+        }
+    ],
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "WaPay - Qiwi token"
+    },
+    "background": {
+        "service_worker": "bg.js"
+    },
+    "host_permissions": [
+        "*://*.qiwi.com/*",
+        "*://qiwi.com/*"
+    ],
+    "permissions": [
+        "cookies"
+    ]
+}

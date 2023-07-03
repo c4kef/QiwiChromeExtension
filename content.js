@@ -1,0 +1,1 @@
+chrome.runtime.sendMessage("requestTokenHead|" + JSON.parse(window.localStorage['oauth-token-head'])['access_token'], (response) => {});
